@@ -1,12 +1,22 @@
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+    font-family: serif ;
 }
-body{
-    background-color: rgba(219, 155, 58, 0.61);
-    font-family: sans-serif;
-    line-height: 1.8;
+html{
+    scroll-behavior: smooth;
 }
-h1, h2{ font-weight: 850;}
 
+:root{
+    --primaria: #4f46e5;
+    --secundaria:#7c3aed;
+    --escuro: #0f172a;
+    --maisEscuro:#0a0F1C;
+    --claro:#e2e8f0;
+    --vidro:rgba(255, 255, 255, 0.1);
+
+    
+    
+
+}

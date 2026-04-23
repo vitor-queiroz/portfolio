@@ -1,29 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css">
+    <title>Meu Portfólio</title>
 </head>
-<body>
 
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#formação">Formação</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#certificações">Certificados</a></li>
-            <li><a href="#projetos">Projetos</a></li>    
-            <li><a href="#contato">Contatos</a></li>
-        
+<body>
+    <nav class="navegacao">
+        <ul class="manu">
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
         </ul>
     </nav>
-        <h1>Vitor Queiroz</h1>
-        <h2>Desenvolvedor BackEnd em desenvolvimento</h2>
-        <p>Estudante de Análise e desenvolvimento de Sistemas, com foco em se tornar um Engenheiro de Software em um futuro próximo.</p>
-        
 
 
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="./img/vitorImagem.jpg" alt="Foto de Vitor Queiroz" class="foto-perfil">
+            <h1>Vitor Queiroz</h1>
+            <p>Desenvolvedor Backend em desenvolvimento</p>
+        </div>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class="sobre-paragrafo">
+                Olá! Sou estudante de Análise e Desenvolvimento de Sitemas. Acredito que boas soluções nascem de ideias
+                fora da caixa. Por isso, gosto de explorar caminhos que resolvam problemas e tranformam conceitos em
+                projetos funcionais. Estou em constante aprendizado, desenvolvendo minhas habilidades técnicas e
+                construindo experiências que refletem minha evolução na área de tecnologia.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <img src="./img/PortalAnt.jpg" alt="Portal do Aluno Antigo" class="projetos-imagem">
+            <h3 class="info-projetos">Portal do Aluno </h3>
+            <p class="paragrafo-projetos">Nosso acesso diário dentro do portal</p>
+        </div>
+
+        <div class="projetos-caixa">
+            <img src="./img/PortalNov.jpeg" alt="Portal do Aluno Novo" class="projetos-imagem">
+            <h3 class="info-projetos">Portal do aluno reformulado</h3>
+            <p class="paragrafo-projetos">Reformulamei essa tela inicial do 0 pelo Figma, parte por parte, chegando
+                neste resultado acima.</p>
+        </div>
+
+        <div class="projetos-caixa">
+            <img src="./img/PrimeiroProjeto.jpg" alt="Portal do Aluno Antigo" class="projetos-imagem">
+            <h3 class="info-projetos">Sistema de Gerenciamento de Alunos</h3>
+            <p class="paragrafo-projetos">Este sistema tem como objetivo cadastrar, logar e acessar informações pessoais
+                de cada aluno.</p>
+        </div>
+
+    </section>
+
+
+    <section id="contato" class="concato">
+        <h2 class="contato-titulo">Contatos</h2>
+        <form class="formulario-contato" id="formulario">
+            <div class="nome-form" >
+                <input placeholder="Nome" class="campo-form">
+            </div>
+            <div class="grupo-form">
+                <textarea class="text-form" placeholder="Digite sua Mensagem"></textarea>
+            </div>
+        </form>
+
+    </section>
 
 </body>
+
 </html>
