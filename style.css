@@ -119,11 +119,13 @@ html{
 
 
     .projetos{
-           
+           padding: 6rem 2rem;
     }
 
     .projetos-titulo{
-
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
     }
 
     .projetos-caixa{
@@ -131,18 +133,36 @@ html{
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*grid-template-columns= crie colunas ==== repeat= todas elas vão se repetir ===== auto-fit= encaixa elas na tela ==== e qual o tamanho dela? o min300px e o maximo= 1fr - no caso a tela toda.*/
             gap: 2rem;
             max-width: 1200px;
+            margin: 0 auto;
             
         }
+        
+        .projetos-card{
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            backdrop-filter: blur(5px);
+            border: 1px solid var(--vidro);
+            overflow: hidden; /* caso o item fique grande demais, esse hidden esconde a sobra*/
+            transition: all 0.5s ease;
+          }
 
-    .projetos-imagem{
+
+             .projetos-card:hover{
+        box-shadow: 0 10px 20px rgba(79, 70, 229, 0.2);
+        transform: translateY(-10px) scale(1.03);
+             }
+    
+
+
+        .projetos-imagem{
             height: 200px;
             width: 100%;
             object-fit: cover; /* e como ele vai se encaixar, no caso estou dizendo para ele cobrir a area que ele esta, claro, respeitando os valores declarados acima*/
-            margin: ;
     }
 
     .info-projetos{
-
+            color: rgba(226, 232, 240, 0.8);
+            line-height: 1.25rem;
     }
 
     .paragrafo-projetos{
