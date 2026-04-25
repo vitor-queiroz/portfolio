@@ -118,6 +118,10 @@ html{
     
 
 
+    
+    
+    
+    
     .projetos{
            padding: 6rem 2rem;
     }
@@ -160,11 +164,14 @@ html{
             object-fit: cover; /* e como ele vai se encaixar, no caso estou dizendo para ele cobrir a area que ele esta, claro, respeitando os valores declarados acima*/
     }
 
+
+    .caixa-textos-projetos{
+        padding: 1.5rem;
+    }
+    
+    
     .info-projetos{
             color: rgba(226, 232, 240, 0.8);
             line-height: 1.25rem;
-    }
-
-    .paragrafo-projetos{
-
+            margin-bottom: 5px;
     }
