@@ -73,8 +73,8 @@ html{
 
 
     .foto-perfil{
-        width: 350px; /*largura*/
-        height: 350px;/*Altura*/
+        width: 320px; /*largura*/
+        height: 320px;/*Altura*/
         object-fit: cover; /* !!!!!!alinhar a imagem certinha dentro do circulo*/
         border-radius: 50%;
         box-shadow: 0 0 20px rgb(31, 30, 30); /* Pesquisando box shadow no google, voce consegue determinar como voce quer o a sua "sombra traseira".*/
