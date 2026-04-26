@@ -18,7 +18,7 @@ html{
 }
 
     body{
-        background-color: var(--escuro); /*Cor de todo o fundo do portfolio*/
+        background-color: var(--maisEscuro);/* Cor de todo o fundo do portfolio*/
         color: var(--claro); /*Cor das letras*/
     }
     
@@ -28,6 +28,8 @@ html{
         width: 100%; /*"fundo da largura*/
         z-index: 100; /*para aparecer na frente do restante da tela*/
         padding: 1.5rem;
+        display: flex;
+        justify-content: center;
 
     }
 
@@ -78,7 +80,8 @@ html{
         box-shadow: 0 0 20px rgb(31, 30, 30); /* Pesquisando box shadow no google, voce consegue determinar como voce quer o a sua "sombra traseira".*/
         border-radius: 500px;
         border: 4px solid var(--vidro);
-        object-position: 60% 77% /* Isso me ajudou muito a conseguir alinhar a posicao da minha foto*/
+        object-position: 60% 77%; /* Isso me ajudou muito a conseguir alinhar a posicao da minha foto*/
+        animation: flutuar 5s ease-in-out infinite; /* vindo direto do @keyframes flutuar = eu crio a animacao dentro da .foto-de-perfil e determino o tempo de flutuamento - começa, termina, começa e termina INFINITAMENTE*/
     }
 
 
@@ -174,13 +177,12 @@ html{
     
     
     .info-projetos{
-            color: rgba(226, 232, 240, 0.8);
-            line-height: 1.25rem;
-            margin-bottom: 5px;
+         margin-bottom: 5px;
     }
 
       .paragrafo-projetos{
-
+        color: rgba(226, 232, 240, 0.8);
+            line-height: 1.25rem;
     }
 
    
@@ -250,4 +252,29 @@ html{
    .botao-form:hover{
     transform: translateY(-4px);
     box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+   }
+
+    
+   
+   .particulas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background:
+    radial-gradient(circle at 10% 20%, rgb(27, 12, 163) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgb(27, 27, 27) 0%, transparent 20%),
+    var(--maisEscuro);
+   }
+
+   @keyframes flutuar {  /*para criar o flutuar na foto de perfil*/
+    0%, 100% {
+        transform: translateY(0);
+    }                            /*No ponto 0 e no ponto 100% eu vou pro zero, como se fosse uma rotação. Em 50& eu vou pro -20, e no 100% eu volto pro 0.*/
+    50%{
+        transform: translateY(-20px);
+    }
    }
