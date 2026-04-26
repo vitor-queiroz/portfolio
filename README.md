@@ -13,6 +13,30 @@ Este portfólio foi criado com o objetivo de reunir meus projetos, compartilhand
 - Interfaces desenvolvidas por mim;
 - Informações sobre minha trajetória profissional e acadêmica.
 
+## Tecnologias utilizadas: 👾
+- HTML
+- CSS
+- JavaScript
+---
+
+## Preview da Tela Inicial: 📟
+<img width="1000" src="https://github.com/user-attachments/assets/df2d614a-6681-41e0-99d0-7b0b33234dc9"/>
+
+### O que ainda precisa ser feito: 🤔
+- [ ] Incluir o JavaScript
+- [ ] Adicionar os links ao clicar nos projetos
+- [x] Animação _flutuar_ na foto de perfil
+- [ ] Formação Acadêmica e Profissional
+
+---
+### Acesse por aqui 📁
+[Meu Portfólio](https://vitor-queiroz.github.io/portfolio)
+
+## Vamos trocar ideias e conhecimentos? 📱
+[Meu Linkedin](https://www.linkedin.com/in/vitor-queiroz-b95224348/)
+
+
+
 
 
 
