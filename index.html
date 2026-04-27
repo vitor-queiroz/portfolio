@@ -109,18 +109,38 @@
 
         <form class="formulario-contato" id="formulario">
             <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form">
+                <input placeholder="Nome" class="campo-form" id="nome">
             </div>
 
             <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem"></textarea>
+                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
             </div>
 
-            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+            <button type="submit" 
+            class="botao-form">Enviar WhatsApp</button>
 
         </form>
 
     </section>
+
+   <!---Java Script --->
+   <script>
+        // document = é todo documento html
+        const nome = document.getElementById('nome'); // pegando o nome que a pessoa digitou
+        const mensagem = document.getElementById('mensagem'); // pegando a mensagem
+        const telefone = '5511947522973'; // coloquei o numero a qual a mensagem deve ser enviada
+
+        // criando o meu formato de envio
+        const texto = `Olá! Me chamo ${nome}, ${mensagem}` // crio a nossa mensagem do formato que a gente quer
+       // (whatsa.me)(%20) eu nao consigo criar um espaco em uma URL, para que o Whatsapp entenda que minha mensagem tem espaco eu coloco esse carinha aqui embaixo - ele cria essa formatacao pra gente
+        const msgFormatada = encodeURIComponent(texto); // formata a mensagem para ir para a url
+
+
+        const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
+
+        window.open(url, '_blank') // peguei a url e vou abrir no window (a janela do navegador), blank= vou abrir essa url em uma nova pagina em branco
+
+    </script>
 
 </body>
 
