@@ -23,11 +23,10 @@ Este portfólio foi criado com o objetivo de reunir meus projetos, compartilhand
 <img width="1000" src="https://github.com/user-attachments/assets/df2d614a-6681-41e0-99d0-7b0b33234dc9"/>
 
 ### O que ainda precisa ser feito: 🤔
-- [ ] Incluir o JavaScript
-- [ ] Adicionar os links ao clicar nos projetos
-- [x] Animação _flutuar_ na foto de perfil
-- [ ] Formação Acadêmica e Profissional
-
+- [x] Melhorar funcionalidades com JavaScript
+- [ ] Adicionar links interativos nos projetos
+- [x] Criar animação de _flutuação_ na foto de perfil
+- [ ] Adicionar seção de formação acadêmica e profissional
 ---
 ### Acesse por aqui 📁
 [Meu Portfólio](https://vitor-queiroz.github.io/portfolio)
