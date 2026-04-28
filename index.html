@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    
+
     <div class="particulas"></div>
-    
-    
-    
+
+
+
     <nav class="navegacao">
         <ul class="menu">
             <li>
@@ -33,7 +33,7 @@
 
 
     <main id="inicio" class="cabecalho">
- 
+
         <img src="./img/Vitor2.png" alt="Foto de Vitor Queiroz" class="foto-perfil">
         <h1>Vitor Queiroz</h1>
         <p class="cabecalho-sub-titulo">Desenvolvedor Backend em desenvolvimento</p>
@@ -66,7 +66,8 @@
 
                 <div class="caixa-textos-projetos">
                     <h3 class="info-projetos">Portal do aluno reformulado</h3>
-                    <p class="paragrafo-projetos">Refiz a tela inicial do portal do aluno da instituição onde estudo, utilizando o Figma, aprimorando a organização e o acesso às informações para os alunos.</p>
+                    <p class="paragrafo-projetos">Refiz a tela inicial do portal do aluno da instituição onde estudo,
+                        utilizando o Figma, aprimorando a organização e o acesso às informações para os alunos.</p>
                 </div>
 
             </div>
@@ -75,7 +76,8 @@
 
 
             <div class="projetos-card">
-                <img src="./img/PrimeiroProjeto.jpg" alt="Tela do primeiro projeto desenvolvido" class="projetos-imagem">
+                <img src="./img/PrimeiroProjeto.jpg" alt="Tela do primeiro projeto desenvolvido"
+                    class="projetos-imagem">
                 <div class="caixa-textos-projetos">
                     <h3 class="info-projetos">Sistema de Gerenciamento de Alunos</h3>
                     <p class="paragrafo-projetos">Este sistema tem como objetivo cadastrar, logar e acessar informações
@@ -83,8 +85,8 @@
                 </div>
 
             </div>
-        
-        
+
+
             <div class="projetos-card">
                 <img src="./img/Loading2.jpg" alt="Animação de carregamento da aplicação" class="projetos-imagem">
 
@@ -94,10 +96,10 @@
                 </div>
 
             </div>
-        
-        
-        
-        
+
+
+
+
         </div>
 
 
@@ -107,7 +109,8 @@
     <section id="contato" class="contatos">
         <h2 class="contato-titulo">Entre em contato</h2>
 
-        <form class="formulario-contato" id="formulario">
+        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
+            <!--- o nosso botão é do tipo submit, ele vai enviar um formulario, então toda vez que o meu formulario for enviado eu posso chamar uma funcao, no caso = enviarWhats().  -->
             <div class="grupo-form">
                 <input placeholder="Nome" class="campo-form" id="nome">
             </div>
@@ -116,30 +119,36 @@
                 <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
             </div>
 
-            <button type="submit" 
-            class="botao-form">Enviar WhatsApp</button>
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
 
         </form>
 
     </section>
 
-   <!---Java Script --->
-   <script>
-        // document = é todo documento html
-        const nome = document.getElementById('nome'); // pegando o nome que a pessoa digitou
-        const mensagem = document.getElementById('mensagem'); // pegando a mensagem
-        const telefone = '5511947522973'; // coloquei o numero a qual a mensagem deve ser enviada
+    <!---Java Script --->
+    <script>
 
-        // criando o meu formato de envio
-        const texto = `Olá! Me chamo ${nome}, ${mensagem}` // crio a nossa mensagem do formato que a gente quer
-       // (whatsa.me)(%20) eu nao consigo criar um espaco em uma URL, para que o Whatsapp entenda que minha mensagem tem espaco eu coloco esse carinha aqui embaixo - ele cria essa formatacao pra gente
-        const msgFormatada = encodeURIComponent(texto); // formata a mensagem para ir para a url
+        function enviarWhats(event) {
+            event.preventDefault() // Por padrao, quando o formulario é enviado, ele reinicializa a tela. --- Entao eu pego este evento, e este (preventDefault) vai evitar que a tela recarregue 
 
 
-        const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`
+            // document = é todo documento html
+            const nome = document.getElementById('nome').value; // pegando o nome que a pessoa digitou ---------- Deu problema ao ser enviado a mensagem, pois nao foi adicionado o .value para pegar apenas o valor.
+            const mensagem = document.getElementById('mensagem').value; // pegando a mensagem
+            const telefone = '5511947522973'; // coloquei o numero a qual a mensagem deve ser enviada
 
-        window.open(url, '_blank') // peguei a url e vou abrir no window (a janela do navegador), blank= vou abrir essa url em uma nova pagina em branco
+            // criando o meu formato de envio
+            const texto = `Olá! Me chamo ${nome}, ${mensagem}` // crio a nossa mensagem do formato que a gente quer
+            // (whatsa.me)(%20) eu nao consigo criar um espaco em uma URL, para que o Whatsapp entenda que minha mensagem tem espaco eu coloco esse carinha aqui embaixo - ele cria essa formatacao pra gente
+            const msgFormatada = encodeURIComponent(texto); // formata a mensagem para ir para a url
 
+
+            const url = `https://wa.me/${telefone}?text=${msgFormatada}`
+
+            console.log(url)
+
+            window.open(url, '_blank') // peguei a url e vou abrir no window (a janela do navegador), blank= vou abrir essa url em uma nova pagina em branco
+        }
     </script>
 
 </body>
