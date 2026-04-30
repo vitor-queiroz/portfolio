@@ -96,6 +96,25 @@ html{
         color: var(--claro);
     }
 
+    .icon{
+        width: 28px;
+        transition: all 0.3 ease;
+        border-radius: 11px;
+    }
+    
+    .alinhamento-icons{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 15px; /* distanciamento entre as imagens*/
+    }
+    
+    .icon:hover{
+        transform: translateY(-4);
+    }
+    
+    
     .sobre{
         padding:6rem 2rem;
     }
