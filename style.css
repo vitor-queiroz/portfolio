@@ -81,7 +81,6 @@ html{
 
 
 
-
     .foto-perfil{
         width: 320px; /*largura*/
         height: 320px;/*Altura*/
@@ -133,7 +132,63 @@ html{
         box-shadow: 0 8px 20px rgba(15, 77, 211, 0.5);
     }
     
-    
+    .carrossel{
+        overflow: hidden;
+        width: 100%;
+        margin: 2rem 0;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        height: 283px;
+        background: rgba(0, 0, 0, 0.4);
+    }
+   
+        .imagem-carrossel{
+            height: 280px;
+            width: auto;
+            max-width: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .carrossel .continuacao{
+            display: flex;
+            gap: 20px;
+            width: max-content;
+            animation: slide 2s linear infinite; /* vai direto pro keyframes la em baixo.*/
+        }
+
+        .linha{
+            display: flex;
+            gap: 20px;
+            flex-shrink: 0;
+        }
+       
+        .imagem-carrossel:hover{
+            transform: scale(1.05);
+            transition: 0.4;
+          
+        }
+   
+        .carrossel:hover .continuacao{
+            animation-play-state: paused;
+        }
+
+         @media(max-width: 768px){
+            .imagem-carrossel{
+                max-width: 280px;
+                height: 200px;
+            }
+            .carrossel{
+                height: 220px;
+            }
+        }
+
+
+   
     .sobre{
         padding:6rem 2rem;
     }
@@ -313,5 +368,15 @@ html{
     }                            /*No ponto 0 e no ponto 100% eu vou pro zero, como se fosse uma rotação. Em 50& eu vou pro -20, e no 100% eu volto pro 0.*/
     50%{
         transform: translateY(-20px);
+    }
+   }
+
+   @keyframes slide{
+    from{
+        transform: translateX(0);
+        }
+    
+    to{
+        transform: translateX(-50px);
     }
    }
